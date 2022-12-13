@@ -2,6 +2,12 @@ import _ from "lodash";
 import "./style.css";
 import Icon from "./icon.svg";
 import printMe from "./print";
+import { here } from "./here";
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+here();
 
 function component() {
     const element = document.createElement("div");
@@ -28,3 +34,6 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+const reactElement = React.createElement('div', {}, []);
+ReactDOM.render(reactElement, document.getElementById('app'))

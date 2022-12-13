@@ -24,6 +24,12 @@
     "webpack-nano": "^1.1.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "estraverse": "^5.3.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "schema-utils": "^4.0.0"
   }
 }
