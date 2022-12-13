@@ -10,7 +10,8 @@ Inner Circle - Design System 과정을 통해 디자인 시스템을 학습하�
 | --- | ---| ---| ---|
 | 22-12-01 ~ 22-12-07 | Onboarding | (없음), [디자인 시스템을 각자 정의해보기](https://github.com/InnerCircleA/design-system/discussions/2) | (없음)|
 | 22-12-08 ~ 22-12-14 | 두 가지 종류의 디자인 시스템 이해 | 모던 프레임워크(React,Vue)의 한계와 현실 | Foundation vs Component Design System |
-| 22-12-15 ~ 22-12-21 | - | - | (개인별로 진행) 각자의 조직내 디자인 시스템에 대한 문제 파악 및 진단, 커뮤니케이션 측면에서 문제점 파악 후 문서화하기 |
+| 22-12-15 ~ 22-12-21 | - | - | (개인별로 진행) [각자의 조직내 디자인 시스템에 대한 문제 파악 및 진단](https://github.com/InnerCircleA/design-system/discussions/9
+), [커뮤니케이션 측면에서 문제점 파악 후 문서화하기](https://github.com/InnerCircleA/design-system/discussions/10) |
 
 ## 팀 단위 활동  
 
