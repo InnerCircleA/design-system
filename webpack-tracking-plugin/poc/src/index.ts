@@ -17,6 +17,3 @@ function component() {
 }
 
 document.body.appendChild(component());
-
-// const reactElement = React.createElement('div', {}, []);
-// ReactDOM.render(reactElement, document.getElementById('app'))

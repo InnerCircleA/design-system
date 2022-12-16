@@ -1,42 +1,46 @@
+const PAGE_ANOTATION_FUNCTION_NAME = "here"
 const estraverse = require('estraverse');
 
 const traverse = (ast, parser) => {
-    let targetPage = undefined;
+    let pages = [];
     estraverse.traverse(ast, {
         enter: function (node, parent) {
-            // TODO: Syntax 분석
             if (node.type === "ExpressionStatement") {
-                // TODO: 특정 함수가 호출된 resource 이름.
-                if (node.expression?.callee?.name === "here") {
-                    targetPage = parser.state.current.rawRequest;
-
-                    isPage = true;
+                // TODO: 조건 고도화할 필요가 있음.
+                // TODO: 어떤 모듈에서 가져왔는지
+                if (node.expression?.callee?.name === PAGE_ANOTATION_FUNCTION_NAME) {
+                    const page = {
+                        location: parser.state.current.rawRequest
+                    }
+                    const arugments = node.expression.arguments;
+                    if (arguments && arguments.length > 0) {
+                        page.name = arugments[0].value;
+                    }
+                    pages.push(page);
                 }
             }
 
             return node;
         }
     })
-    return targetPage;
+    return pages;
 }
 
 
 class TraverseModuleGraphPlugin {
     apply(compiler) {
         const className = this.constructor.name;
-
-        const dependenciesByPage = new Map();
-
-
         compiler.hooks.normalModuleFactory.tap(className, (factory) => {
             factory.hooks.parser
                 .for('javascript/auto')
                 .tap(className, (parser, options) => {
-                    // NOTE:  https://github.com/webpack/webpack/blob/8e6a012dbbb1526db1da753b61c43e8c61b3379f/lib/Parser.js#L90
                     parser.hooks.program
                         .tap(className, (ast, comments) => {
-                            const targetPage = traverse(ast, parser);
-                            targetPage && console.log("[AST] - Find Page: ", targetPage);
+                            const pages = traverse(ast, parser);
+                            pages.map(page => {
+                                console.log("Tracking Page: ");
+                                console.log(page);
+                            })
                         })
                 });
         });
