@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { AstTraversePlugin } = require("./plugins/ast-traverse-plugin");
-const { AccessDependenciesPlugin } = require("./plugins/access-dependencies-plugin");
+
+const { TraverseModuleGraphPlugin } = require("./plugins/traverse-module-graph-plugin");
 
 module.exports = {
 
@@ -18,8 +18,7 @@ module.exports = {
       title: 'Output Management',
       template: './src/index.html'
     }),
-    new AstTraversePlugin(),
-    new AccessDependenciesPlugin(),
+    new TraverseModuleGraphPlugin()
   ],
   output: {
     filename: "[name].bundle.js",

@@ -1,28 +1,11 @@
-import _ from "lodash";
-import "./style.css";
-import Icon from "./icon.svg";
 import printMe from "./print";
 import { here } from "./here";
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-
-here();
+// NOTE: 이 함수가 있으면 여기가 페이지임을 나타낼 수 있습니다.
+here("여기가 컴포넌트 수집 Root입니다.");
 
 function component() {
     const element = document.createElement("div");
-
-
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(["Hello", "webpack"], " ");
-    element.classList.add('hello')
-
-    // Add the image to our existing div.
-    const myIcon = new Image();
-    myIcon.src = Icon;
-
-    element.appendChild(myIcon);
-
 
     const btn = document.createElement('button');
     btn.innerHTML = 'Click me and check the console!';
@@ -35,5 +18,5 @@ function component() {
 
 document.body.appendChild(component());
 
-const reactElement = React.createElement('div', {}, []);
-ReactDOM.render(reactElement, document.getElementById('app'))
+// const reactElement = React.createElement('div', {}, []);
+// ReactDOM.render(reactElement, document.getElementById('app'))
