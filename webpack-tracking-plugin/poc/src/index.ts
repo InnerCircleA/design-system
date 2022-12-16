@@ -1,9 +1,11 @@
 import printMe from "./print";
-import { here } from "./here";
+import { here } from "./here"; 
+// import _ from "lodash";
+
+// _.VERSION;
 
 // NOTE: 이 함수가 있으면 여기가 페이지임을 나타낼 수 있습니다.
-here("여기가 컴포넌트 수집 Root입니다.");
-
+here("메인 테스트 모듈"); 
 function component() {
     const element = document.createElement("div");
 

@@ -1,6 +1,6 @@
 import { here } from "./here";
 
-here("printMe 모듈입니다.");
+here("printMe 테스트 모듈"); 
 export default function printMe() {
     console.log('Nice!!!');
 }
