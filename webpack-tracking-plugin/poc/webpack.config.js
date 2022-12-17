@@ -18,7 +18,10 @@ module.exports = {
       title: 'Output Management',
       template: './src/index.html'
     }),
-    new TraverseModuleGraphPlugin()
+    new TraverseModuleGraphPlugin({
+      trackingModule: "./components",
+      pageAnotation: "here"
+    })
   ],
   output: {
     filename: "[name].bundle.js",

@@ -1,0 +1,7 @@
+[
+  {
+    "name": "index.ts",
+    "alias": "메인 테스트 모듈",
+    "importNames": ["C", "A", "B"]
+  }
+]

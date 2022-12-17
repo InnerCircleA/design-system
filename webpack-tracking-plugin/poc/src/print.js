@@ -1,6 +1,8 @@
-import { here } from "./here";
+import { A, B } from "./components";
 
-here("printMe 테스트 모듈"); 
+ 
 export default function printMe() {
     console.log('Nice!!!');
+    A();
+    B();
 }

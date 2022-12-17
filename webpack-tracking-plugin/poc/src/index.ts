@@ -1,12 +1,11 @@
 import printMe from "./print";
-import { here } from "./here"; 
-// import _ from "lodash";
-
-// _.VERSION;
+import { here  } from "./here";  
+import { C } from "./components";
 
 // NOTE: 이 함수가 있으면 여기가 페이지임을 나타낼 수 있습니다.
 here("메인 테스트 모듈"); 
 function component() {
+    C();
     const element = document.createElement("div");
 
     const btn = document.createElement('button');
