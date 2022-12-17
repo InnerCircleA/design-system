@@ -73,7 +73,11 @@ class TraverseModuleGraphPlugin {
               statement.expression.callee.type === "Identifier" &&
               statement.expression.callee.name === this.pageAnotation
             ) {
+              const descriptionFile =
+                parser.state.module.resourceResolveData.descriptionFileData;
+
               const page = {
+                project: `${descriptionFile.name}@${descriptionFile.version}`,
                 name: path.basename(parser.state.module.resource), // user friendly module identifier
                 alias: undefined, // (optional) 별칭 user friendly name
               };
@@ -107,10 +111,10 @@ class TraverseModuleGraphPlugin {
       });
     });
 
-    // 3. done compilation 
+    // 3. Done compilation
     compiler.hooks.done.tap(className, () => {
       const result = JSON.stringify(Array.from(this.pageInfoMap.values()));
-        
+
       // TODO: Replace Upload API
       fs.writeFile("tracking.json", result, (err) => {
         if (err) console.log(err);
@@ -118,7 +122,7 @@ class TraverseModuleGraphPlugin {
           console.log("File written successfully\n");
         }
       });
-    })
+    });
   }
 }
 
