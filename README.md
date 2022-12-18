@@ -17,3 +17,12 @@ Inner Circle - Design System 과정을 통해 디자인 시스템을 학습하�
 | 기간 | 주제 | 기타 |
 | --- | --- | --- | 
 | 22-12-09 ~ 22-12-16 | 각자 디자인 시스템에 도전해보고 싶은 부분 정해서 PoC 도전 후 팀내에 공유하기 (그 후 방향성 고민) | [관련 논의](https://github.com/InnerCircleA/design-system/discussions/6) |
+
+
+## PoC
+
+| 주제 | 프로젝트 |
+|--- | --- |
+| webpack 컴포넌트 트레킹 플러그인 | (webpack-tracking-plugin)[https://github.com/InnerCircleA/design-system/tree/main/webpack-tracking-plugin/poc] |
+| rollup 컴포넌트 트레킹 플러그인 |  |
+| 피그마 플러그인 | |
