@@ -23,6 +23,6 @@ Inner Circle - Design System 과정을 통해 디자인 시스템을 학습하�
 
 | 주제 | 프로젝트 |
 |--- | --- |
-| webpack 컴포넌트 트레킹 플러그인 | (webpack-tracking-plugin)[https://github.com/InnerCircleA/design-system/tree/main/webpack-tracking-plugin/poc] |
+| webpack 컴포넌트 트레킹 플러그인 | [webpack-tracking-plugin](https://github.com/InnerCircleA/design-system/tree/main/webpack-tracking-plugin/poc) |
 | rollup 컴포넌트 트레킹 플러그인 |  |
 | 피그마 플러그인 | |
