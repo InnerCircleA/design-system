@@ -1,22 +1,28 @@
-import printMe from "./print";
-import { page  } from "./anotation";  
-import { C } from "./lib/components";
-
-// NOTE: this is page module.
-page("Main Page"); 
+import { DetailPage } from "./DetailPage";
+import { MainPage } from "./MainPage";
 
 function createExampleDOM() {
-    C();
+  const element = document.createElement("div");
+  const pageWrapperElement = document.createElement("div");
+  pageWrapperElement.appendChild(MainPage())
 
-    const element = document.createElement("div");
+  const mainPageButton = document.createElement("button");
+  mainPageButton.innerHTML = "Go Main Page";
+  mainPageButton.onclick = () => {
+    pageWrapperElement.replaceChildren(MainPage());
+  };
 
-    const btn = document.createElement('button');
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+  const detailPageButton = document.createElement("button");
+  detailPageButton.innerHTML = "Go Detail Page";
+  detailPageButton.onclick = () => {
+    pageWrapperElement.replaceChildren(DetailPage());
+  };
 
-    element.appendChild(btn);
+  element.appendChild(mainPageButton);
+  element.appendChild(detailPageButton);
+  element.appendChild(pageWrapperElement);
 
-    return element;
+  return element;
 }
 
 document.body.appendChild(createExampleDOM());

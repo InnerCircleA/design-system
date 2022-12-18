@@ -80,6 +80,50 @@ parser.hooks.statement.tap(className, (statement) => {
 
 이제 `ModuleGraph` 트리 에서 page 모듈을 root로 DFS를 이용하면 각 페이지별로 사용된 모듈을 얻어 올 수 잇습니다.
 
+# 결과
+
+`webpack.config.js` 에 새로 만든 Plugin을 추가 후
+
+```javascript
+module.exports = {
+  // ...
+plugins: [
+  // ...
+  new TraverseModuleGraphPlugin({
+    trackingModule: "./lib/components", // TODO: 추적하고 싶은 모듈 이름으로 변경
+    pageAnotation: "page", // TOOD: 페이지 모듈에서 호출될 함수명으로 변경
+  }),
+];
+}
+```
+
+웹팩 빌드시
+
+```bash
+npm run build
+```
+
+아래 이미지와 같은 의존 관계를 json 결과로 추출할 수 있습니다.
+
+<img src="./docs/dependency.png" width="300" />
+
+```json
+[
+  {
+    "project": "poc@1.0.0",
+    "name": "DetailPage.ts",
+    "alias": "상세 페이지",
+    "importNames": ["CancelButton"]
+  },
+  {
+    "project": "poc@1.0.0",
+    "name": "MainPage.ts",
+    "alias": "메인 페이지",
+    "importNames": ["ConfirmButton", "CancelButton"]
+  }
+]
+```
+
 # 개선해야할 부분
 
 가장 기본적인 기능정도만 하도록 PoC 구현해보았습니다. 실제로 활용할 만한 수준이되기에는 많은 부분을 개선해야하지만 아이디어를 증명하는 용도로는 충분할 것 같습니다.

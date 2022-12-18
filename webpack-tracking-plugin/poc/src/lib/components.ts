@@ -2,14 +2,15 @@
  * Example mocking components
  */
 
-export const A = () => {
-  console.log("Render A Component");
+export const ConfirmButton = () => { 
+  const button =  document.createElement("button");
+  button.innerText = "Confirm";
+  return button;
 };
 
-export const B = () => {
-  console.log("Render B Component");
+export const CancelButton = () => {
+  const button =  document.createElement("button");
+  button.innerText = "Cancel";
+  return button;
 };
-
-export const C = () => {
-  console.log("Render C Component");
-};
+ 
