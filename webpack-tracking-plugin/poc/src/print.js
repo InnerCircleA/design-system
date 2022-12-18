@@ -1,6 +1,5 @@
-import { A, B } from "./components";
+import { A, B } from "./lib/components";
 
- 
 export default function printMe() {
     console.log('Nice!!!');
     A();

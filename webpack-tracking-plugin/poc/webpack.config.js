@@ -15,12 +15,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Template index.html',
       template: './src/index.html'
     }),
     new TraverseModuleGraphPlugin({
-      trackingModule: "./components",
-      pageAnotation: "here"
+      trackingModule: "./lib/components", // TODO: 추적하고 싶은 모듈 이름으로 변경
+      pageAnotation: "page" // TOOD: 페이지 모듈에서 호출될 함수명으로 변경
     })
   ],
   output: {
@@ -37,15 +37,7 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader', // TODO: Change Babel Loader. ref. https://webpack.js.org/guides/typescript/#loader
         exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
+      } 
     ],
   },
 };

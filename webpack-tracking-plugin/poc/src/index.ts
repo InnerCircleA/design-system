@@ -1,11 +1,13 @@
 import printMe from "./print";
-import { here  } from "./here";  
-import { C } from "./components";
+import { page  } from "./anotation";  
+import { C } from "./lib/components";
 
-// NOTE: 이 함수가 있으면 여기가 페이지임을 나타낼 수 있습니다.
-here("메인 테스트 모듈"); 
-function component() {
+// NOTE: this is page module.
+page("Main Page"); 
+
+function createExampleDOM() {
     C();
+
     const element = document.createElement("div");
 
     const btn = document.createElement('button');
@@ -17,4 +19,4 @@ function component() {
     return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(createExampleDOM());
