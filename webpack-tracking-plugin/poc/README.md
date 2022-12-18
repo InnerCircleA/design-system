@@ -1,5 +1,7 @@
 # `Library Tracking Webpack Plugin`
 
+Presentation - https://slides.com/joking/poc/fullscreen
+
 디자인 시스템의 일관성을 위해 특정 컴포넌트 혹은 파운데이션이 사용되는 프로젝트를 추적하기 위한 기반 기술의 실현 가능성을 체크하기 위한 Proof Of Concept 프로젝트입니다.
 
 # 왜? 필요한가?
