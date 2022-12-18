@@ -1,0 +1,1 @@
+[{"project":"poc@1.0.0","name":"DetailPage.ts","alias":"상세 페이지","importNames":["CancelButton"]},{"project":"poc@1.0.0","name":"MainPage.ts","alias":"메인 페이지","importNames":["ConfirmButton","CancelButton"]}]
