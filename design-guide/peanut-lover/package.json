@@ -1,11 +1,13 @@
 {
   "name": "peanut-lover",
-  "version": "1.0.0",
-  "description": "우선, 재직 중인 회사에서 사용하는 공식적인 디자인 가이드라인은 아니며 앱의 모습을 보고 스스로 재구성한 디자인 가이드임을 밝힘니다.",
+  "version": "1.0.1",
+  "description": "simple design system",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build-storybook-docs": "build-storybook --docs",
+    "release": "vercel"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +29,8 @@
     "eslint": "^8.31.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "vercel": "^28.10.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.10.5",

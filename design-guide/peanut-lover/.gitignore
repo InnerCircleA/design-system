@@ -3,3 +3,6 @@ node_modules
 
 # 이 프로젝트에서는 필요없음.
 yarn.lock
+.vercel
+
+storybook-static/**/*

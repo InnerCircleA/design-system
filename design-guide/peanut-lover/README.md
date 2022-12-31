@@ -1,11 +1,15 @@
 # 재직 중인 회사의 디자인 가이드라인
 
+[Storybook Link](https://peanut-design-system-peanut-lover.vercel.app/)
+
 우선, 재직 중인 회사에서 사용하는 공식적인 디자인 가이드라인은 아니며 앱의 모습을 보고 스스로 재구성한 디자인 가이드임을 밝힘니다.
 
-**Miso** 는 생활에 필요한 모든 서비스를 간편하게 물건 사듯이 제공함으로써 고객의 삶을 더욱 편리하게 하는 것을 목적으로하는 홈서비스 플랫폼 회사입니다.
+# Release
 
-# Foundation
+Static File 을 Vercel에 배포
 
-##
+> https://storybook.js.org/docs/react/writing-docs/build-documentation#publish-storybooks-documentation
 
-#
+# TODO
+
+- [ ] Need lint for `.mdx`
