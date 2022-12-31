@@ -1,4 +1,4 @@
-# 재직 중인 회사의 디자인 가이드라인
+# Simple Miso Design System
 
 [Storybook Link](https://peanut-design-system-peanut-lover.vercel.app/)
 
@@ -6,7 +6,11 @@
 
 # Release
 
-Static File 을 Vercel에 배포
+Used vercel CLI
+
+```
+$yarn release
+```
 
 > https://storybook.js.org/docs/react/writing-docs/build-documentation#publish-storybooks-documentation
 
