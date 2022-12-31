@@ -1,37 +1,50 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { PropsWithChildren } from "react";
+import { BLUE, BLUE_DARK, BLUE_LIGHT, BLUE_STROKE, WHITE } from "../colors";
 
 type Props = {
-  primary?: boolean;
+  /** theme는 버튼의 중요도를 나트내는 표시 */
+  theme: "primary" | "secondary";
 };
 
 export const Button: React.FC<PropsWithChildren<Props>> = ({
-  primary,
+  theme,
   children,
 }) => {
-  const buttonTheme = primary ? theme["primary"] : undefined;
-  return <button css={[style, buttonTheme]}>{children}</button>;
+  return <button css={[style, themes[theme]]}>{children}</button>;
 };
 
-const theme = {
+const themes = {
   primary: css`
-    background: #20c997;
-    color: white;
-    svg {
-      fill: white;
-    }
+    background: ${BLUE};
+    color: ${WHITE};
     &:hover {
-      background: #38d9a9;
+      background: ${BLUE_DARK};
     }
     &:active {
-      background: #12b886;
+      opacity: 0.5;
     }
     &:disabled {
-      background: #aed9cc;
+      background: ${BLUE_STROKE};
+    }
+  `,
+  secondary: css`
+    background: ${BLUE_LIGHT};
+    color: ${BLUE};
+    &:hover {
+      background: ${BLUE};
+      color: ${WHITE};
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    &:disabled {
+      background: ${BLUE_STROKE};
     }
   `,
 };
+
 const style = css`
   display: flex;
   align-items: center;
@@ -41,21 +54,11 @@ const style = css`
   height: 2rem;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
-  background: #20c997;
   color: white;
   border-radius: 0.25rem;
   line-height: 1;
   font-weight: 600;
   &:focus {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  }
-  &:hover {
-    background: #38d9a9;
-  }
-  &:active {
-    background: #12b886;
-  }
-  &:disabled {
-    cursor: not-allowed;
   }
 `;

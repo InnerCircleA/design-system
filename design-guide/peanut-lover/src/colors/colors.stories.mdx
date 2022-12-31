@@ -1,0 +1,158 @@
+<!-- Colors.stories.mdx -->
+
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import {
+  BLUE,
+  BLUE_LIGHT,
+  BLUE_DARK,
+  BLUE_STROKE,
+  BLACK,
+  GREY_MODAL,
+  GREY_DARK,
+  GREY_MEDIUM,
+  GREY_MEDIUM_LIGHT,
+  GREY_LIGHT,
+  GREY_EXLIGHT,
+  WHITE,
+  WHITE_OPACITY_BG,
+  TURQUOISE,
+  YELLOW,
+  YELLOW_LIGHT,
+  DARK_NAVY,
+  RED,
+  SALMON,
+} from "./index";
+
+<Meta title="Foundations/colors" />
+
+# Color Foundation
+
+미소 디자인 시스템에서 사용되는 컬러는 로고와 함께 미소를 대표하는 중요한 요소입니다.
+
+일관성있는 컬러 사용은 미소 앱의 일관성있는 UX를 위해 중요한 요소이므로 색상 활용 기준을
+준수해야합니다.
+
+> 🚧 현재는 모바일 앱 내에서만 미소 디자인 시스템을 사용하기에 제한적인 컬러를 사용하고 있습니다.
+> 웹 페이지를 확장해나아갈 떄 다시 수정할 예정입니다.
+
+## Main Blue Colors
+
+<ColorPalette>
+  <ColorItem
+    title="blue"
+    subtitle="primary color"
+    colors={{
+      BLUE,
+    }}
+  />
+  <ColorItem
+    title="blue light"
+    subtitle="secondary color"
+    colors={{
+      BLUE_LIGHT,
+    }}
+  />
+  <ColorItem
+    title="blue dark"
+    subtitle="only used for effect color for blue"
+    colors={{
+      BLUE_DARK,
+    }}
+  />
+  <ColorItem
+    title="blue light stroke"
+    subtitle="Only used for storke color with blue light"
+    colors={{
+      BLUE_STROKE,
+    }}
+  />
+</ColorPalette>
+
+## Main Grey Colors
+
+그레이 계열의 색은 주로 텍스트 혹은 컴포넌트간의 경계를 나타내기 위해 주로 사용됩니다.
+
+<ColorPalette>
+  <ColorItem
+    title="grey modal"
+    subtitle="Main Texts"
+    colors={{
+      GREY_MODAL,
+    }}
+  />
+  <ColorItem
+    title="grey dark"
+    subtitle="Sub texts, but users need to read. For example, partner information for RfQ services, service policy content"
+    colors={{
+      GREY_DARK,
+    }}
+  />
+  <ColorItem
+    title="grey medium"
+    subtitle="Sub texts, but users don`t need to read. For example, description for service, 지번 주소 for 도로명 주소"
+    colors={{
+      GREY_MEDIUM,
+    }}
+  />
+  <ColorItem
+    title="grey light"
+    subtitle="Used for stroke color for card-type components"
+    colors={{
+      GREY_LIGHT,
+    }}
+  />
+  <ColorItem
+    title="grey exlight"
+    subtitle="Used for chatting background or 1px line divider"
+    colors={{
+      GREY_EXLIGHT,
+    }}
+  />
+  <ColorItem
+    title="white"
+    subtitle="White text"
+    colors={{
+      WHITE,
+    }}
+  />
+
+  <ColorItem
+    title="white background"
+    subtitle="Only used for text button background on the colored screen."
+    colors={{
+      WHITE_OPACITY_BG,
+    }}
+  />
+</ColorPalette>
+
+## Sub Colors
+
+<ColorPalette>
+  <ColorItem
+    title="turquoise"
+    subtitle="represent special type services"
+    colors={{ TURQUOISE }}
+  />
+  <ColorItem title="yellow" subtitle="for warning" colors={{ YELLOW }} />
+  <ColorItem
+    title="yellow light"
+    subtitle="for background color for warning"
+    colors={{ YELLOW_LIGHT }}
+  />
+  <ColorItem
+    title="dark navy"
+    subtitle="not often used"
+    colors={{ DARK_NAVY }}
+  />
+  <ColorItem
+    title="red"
+    subtitle="used for negative actions. For example, cancel booking"
+    colors={{ RED }}
+  />
+  <ColorItem
+    title="salmon"
+    subtitle="used for background color of negative actions"
+    colors={{ SALMON }}
+  />
+
+</ColorPalette>
