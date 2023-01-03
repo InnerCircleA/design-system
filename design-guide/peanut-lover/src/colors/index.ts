@@ -14,7 +14,7 @@ export const GREY_EXLIGHT = "#F3F4F8";
 export const WHITE = "#FFFFFF";
 export const WHITE_OPACITY_BG = "#FFFFFF1F";
 
-export const TURQUOISE = "#00C8C1";
+export const TEEL = "#00C8C1";
 export const YELLOW = "#FFC81F";
 export const YELLOW_LIGHT = "#FFF9E4";
 export const DARK_NAVY = "#00395B";

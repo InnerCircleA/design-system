@@ -1,11 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button } from "./Button";
+import { GREY_EXLIGHT, GREY_LIGHT } from "../colors";
+import { Button } from "./Button"; 
 
 export default {
-  title: "components/Button",
-  component: Button,
+  title: "Components/Button",
+  component: Button, 
 } as ComponentMeta<typeof Button>;
 
 const Template = (args: any) => <Button {...args} />;
@@ -79,7 +80,91 @@ export const customWidth = () => {
         <Button theme="secondary" width={"100%"} size="big">
           Full Button
         </Button>
-      </div> 
+      </div>
     </div>
   );
 };
+
+const buttonHorizontalWrapper = css`
+  & > div {
+    display: inline-block;
+  }
+  .description {
+    margin-bottom: 0.5rem;
+  }
+  & > div {
+    margin-right: 2rem;
+  }
+`;
+
+export const themes = () => (
+  <div css={buttonHorizontalWrapper}>
+    <div>
+      <div className="description">Primary</div>
+      <Button theme="primary" size="big">
+        Button
+      </Button>
+    </div>
+    <div>
+      <div className="description">Secondary</div>
+      <Button theme="secondary" size="big">
+        Button
+      </Button>
+    </div>
+    <div>
+      <div className="description">Negative</div>
+      <Button theme="negative" size="big">
+        Button
+      </Button>
+    </div>
+  </div>
+);
+
+const stickyButtonWrapper = css`
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  background: white;
+  border-top: 1px solid ${GREY_LIGHT};
+
+  & > button + button {
+    margin-top: 8px;
+  }
+`;
+
+const mobileDeviceContainer = css`
+  display: flex;
+  flex-direction: column;
+  border: 2px solid ${GREY_EXLIGHT};
+  width: 320px;
+  height: 500px;
+  background: ${GREY_EXLIGHT};
+`;
+
+export const stickyButton = () => {
+  return (
+    <div css={mobileDeviceContainer}>
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Content
+      </div>
+      <div css={stickyButtonWrapper}>
+        <Button theme="primary" size="big">
+          확인
+        </Button>
+        <Button theme="secondary" size="big">
+          취소
+        </Button>
+      </div>
+    </div>
+  );
+};
+ 

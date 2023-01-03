@@ -17,7 +17,7 @@ type Props = {
   /** 버튼의 너비를 임의로 설정합니다. */
   width?: string | number;
   /** 버튼의 사이즈 */
-  size?: "small" | "medium" | "big"
+  size?: "small" | "medium" | "big";
 };
 
 export const Button: React.FC<PropsWithChildren<Props>> = ({
@@ -26,9 +26,13 @@ export const Button: React.FC<PropsWithChildren<Props>> = ({
   children,
   width,
 }) => {
-  return <button css={[style, themes[theme], sizes[size], { width }]}>{children}</button>;
+  return (
+    <button css={[style, themes[theme], sizes[size], { width }]}>
+      {children}
+    </button>
+  );
 };
- 
+
 const sizes = {
   small: css`
     height: 1.75rem;
@@ -45,7 +49,7 @@ const sizes = {
     font-size: 1.125rem;
     padding: 16px 1.5rem;
   `,
-}; 
+};
 
 const themes = {
   primary: css`

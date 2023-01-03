@@ -9,9 +9,9 @@ export default {
   component: Icon,
   parameters: {
     docs: {
-      page: IcongraphyMDXDocument
-    }
-  }
+      page: IcongraphyMDXDocument,
+    },
+  },
 } as ComponentMeta<typeof Icon>;
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
@@ -19,18 +19,18 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 export const icon: ComponentStory<typeof Icon> = Template.bind({});
 
 icon.args = {
-    icon: "add"
-}
+  icon: "add",
+};
 icon.story = {
   name: "Default",
 };
 
-export const customSize = () => <Icon icon="address" size="4rem" />;
+export const customSize = () => <Icon icon="add" size="4rem" />;
 
-export const customColor = () => <Icon icon="address" color="red" />;
+export const customColor = () => <Icon icon="add" color="red" />;
 
-export const customizedWithStyle = () => (
-  <Icon icon="address" css={{ color: "red", width: "4rem" }} />
+export const customizedWidthStyle = () => (
+  <Icon icon="add" css={{ width: "4rem" }} />
 );
 
 export const listOfIcons = () => {

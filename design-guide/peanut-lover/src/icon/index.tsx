@@ -19,7 +19,7 @@ export type Props = {
 
 export const Icon: React.FC<PropsWithChildren<Props>> = ({
     icon,
-    color = BLACK,
+    color,
     size = "24px",
     className,
   }) => {
@@ -27,7 +27,7 @@ export const Icon: React.FC<PropsWithChildren<Props>> = ({
   if (SVGIcon === undefined) return null;
     return (
       <SVGIcon
-        css={{ fill: color || "currentColor", width: size, height: "auto" }}
+        css={{ fill: color || "currentColor", storke: color || "currentColor", width: size, height: "auto" }}
         className={className}
       />
     );
