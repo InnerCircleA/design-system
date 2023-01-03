@@ -2,18 +2,9 @@
 
 [Storybook Link](https://peanut-design-system-peanut-lover.vercel.app/)
 
-우선, 재직 중인 회사에서 사용하는 공식적인 디자인 가이드라인은 아니며 앱의 모습을 보고 스스로 재구성한 디자인 가이드임을 밝힘니다.
+우선, 재직 중인 회사에서 서비스 중인 앱 구성과 피그만 내용을 보고 스스로 조합해서 재구성해서
 
-# Release
+- 조직 내 프로젝트에 기반한 스타일 가이드 정리
+- 스타일 가이드 토대로 컴포넌트 라이브러리 정리
 
-Used vercel CLI
-
-```
-$yarn release
-```
-
-> https://storybook.js.org/docs/react/writing-docs/build-documentation#publish-storybooks-documentation
-
-# TODO
-
-- [ ] Need lint for `.mdx`
+위 두가지 미션을 스토리북으로 정리해보았습니다.
