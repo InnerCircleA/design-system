@@ -1,0 +1,108 @@
+import { Meta, Typeset } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Typography" />
+
+export const headerTypography = {
+  type: {
+    primary: "Noto Sans CJK KR",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+  },
+  size: {
+    s: 14,
+    m: 16,
+    l: 20,
+    xl: 28,
+  },
+};
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+# Header Typography
+
+**Font:** Nunito Sans
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontSizes={[
+    Number(headerTypography.size.xl),
+    Number(headerTypography.size.l),
+    Number(headerTypography.size.m),
+    Number(headerTypography.size.s),
+  ]}
+  fontWeight={headerTypography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={headerTypography.type.primary}
+/>
+
+export const bodyTypography = {
+  type: {
+    primary: "Noto Sans CJK KR",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+  },
+  size: {
+    xs: 12,
+    s: 13,
+    m: 14,
+    l: 16,
+    xl: 20,
+  },
+};
+
+# Body Typography
+
+**Font:** Nunito Sans
+
+**Weights:** 400(regular)
+
+<Typeset
+  fontSizes={[
+    Number(bodyTypography.size.xl),
+    Number(bodyTypography.size.l),
+    Number(bodyTypography.size.m),
+    Number(bodyTypography.size.s),
+  ]}
+  fontWeight={bodyTypography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={bodyTypography.type.primary}
+/>
+
+export const buttonTypography = {
+  type: {
+    primary: "Noto Sans CJK KR",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+  },
+  size: {
+    s: 13,
+    m: 14,
+    l: 16,
+  },
+};
+
+# Button Typography
+
+**Font:** Nunito Sans
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontSizes={[
+    Number(buttonTypography.size.xl),
+    Number(buttonTypography.size.l),
+    Number(buttonTypography.size.m),
+    Number(buttonTypography.size.s),
+  ]}
+  fontWeight={buttonTypography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={buttonTypography.type.primary}
+/>

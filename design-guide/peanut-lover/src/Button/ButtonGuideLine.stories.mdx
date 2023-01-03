@@ -1,0 +1,46 @@
+import { Story, Meta } from "@storybook/addon-docs";
+
+<Meta title="Components/ButtonGuideLine" />
+
+# Miso Button Design Guideline
+
+해당 문서는 미소 앱 서비스를 개발시 버튼 사용 가이드라인입니다.
+
+## Basic Button
+
+<Story id="components-button--themes" />
+
+고객의 행동이 필요한 기능을 가진 화면이 있다면 위 Basic 버튼을 사용해주세요.
+
+- 만약 특정 기능이 화면에서 가장 중요한 기능이라면 `primary` 버튼을 사용해주세요.
+- 그 외의 기능들은 `secondary` 버튼을 사용해주세요.
+- 🚧 같은 화면에 `primary` 버튼을 한 번 이상 사용하지마세요.
+
+### Bottom Sticky Basic Button
+
+<Story id="components-button--sticky-button" />
+
+Basic button 은 `in-line` 그리고 `at the bottom`에서 모두 사용할 수 있습니다.
+
+만약 화면 컨텐츠가 주로 사용되는 device의 높이보다 클 것 같다면 bottom sticky 버튼을 사용해주세요.
+
+## Full Button
+
+<Story id="components-fullbutton--themes" />
+
+해당 화면이 사용자의 확인을 필요로 하고 전체 페이지가 이 확인을 위한 것이라면 Full Button을 사용해주세요.
+
+예를들어, 사용자의 확인이 필요한 모달의 submit 버튼들은 Full button로 사용될 것입니다..
+
+<Story id="components-fullbutton--full-button-in-modal" />
+
+## Home Navigation Button
+
+<Story id="components-navigationbutton--navigation-button-with-icon" />
+
+앱의 메인화면에서 다른 화면으로 이동할 때만 사용되는 버튼입니다.
+
+홈에는 다양한 컨텐츠가 보여지고 메인 바탕색도 다른 화면들과 달리 `BLUE`색을 가지기 때문에 위에서 소개한 `Basic` 버튼과는 다른 기능임을 암시하기 위해 다른 색과 형태를 가지는 버튼입니다.
+
+- 최소 4 글자 ~ 최대 12글자까지 버튼 텍스트를 사용해주세요.
+- 아이콘의 색과 텍스트의 컬러를 일치시켜주세요.
