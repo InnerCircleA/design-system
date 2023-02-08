@@ -33,7 +33,9 @@ Inner Circle - Design System 과정을 통해 디자인 시스템을 학습하�
 
 ## Prodjct 
 
-[Design System Monitoring](https://github.com/InnerCircleA/design-system-monitoring)
+- [프로젝트 소개](https://slides.com/joking/inner-circle-a)
+
+- [Design System Monitoring Repository](https://github.com/InnerCircleA/design-system-monitoring)
 
 모노 레포내 여러 프로젝트에서 Core Component Library의 사용을 추적하는 프로젝트
 
